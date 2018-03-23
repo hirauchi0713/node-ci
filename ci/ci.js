@@ -2,7 +2,7 @@ require('dotenv').config()
 
 const OWNER  = process.env.OWNER
 const REPO   = process.env.REPO
-const TOKEN  = process.env.GIT_SQLPP_TOKEN
+const TOKEN  = process.env.GIT_TOKEN
 
 function makeHeaders(_head) {
   var head = _head || {}
