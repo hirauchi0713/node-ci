@@ -1,0 +1,12 @@
+{
+  "required_status_checks": {
+    "include_admins": true,
+    "strict": false,
+    "contexts": [
+      "check"
+    ]
+  },
+  "enforce_admins": true,
+  "required_pull_request_reviews": null,
+  "restrictions": null
+}

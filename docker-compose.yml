@@ -1,0 +1,6 @@
+version: "2"
+services:
+  node-ci:
+    image: hirauchi/node-ci
+    volumes:
+      - ".env:/.env"
