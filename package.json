@@ -12,6 +12,7 @@
     "pr-check-ok": "node ci/pr-check-ok.js",
     "branch-protection": "node ci/branch-protection.js",
     "docker-build": "docker build -t hirauchi/node-ci .",
+    "git-open": "open https://github.com/hirauchi0713/node-ci",
     "docker-push": "docker push hirauchi/node-ci"
   },
   "devDependencies": {
