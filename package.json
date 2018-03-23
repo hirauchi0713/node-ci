@@ -11,7 +11,8 @@
   "scripts": {
     "pr-check-ok": "node ci/pr-check-ok.js",
     "branch-protection": "node ci/branch-protection.js",
-    "docker-build": "docker build -t hirauchi/node-ci ."
+    "docker-build": "docker build -t hirauchi/node-ci .",
+    "docker-push": "docker push hirauchi/node-ci"
   },
   "devDependencies": {
     "dotenv": "^5.0.1",
