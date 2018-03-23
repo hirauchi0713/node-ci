@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "node-ci",
   "main": "index.js",
-  "repository": "git@github.com:hirauchi0713/sqlpp.git",
+  "repository": "git@github.com:hirauchi0713/node-ci.git",
   "author": "Hideyuki Hirauchi <hirauchi@ideapump.net>",
   "license": "MIT",
   "private": true,

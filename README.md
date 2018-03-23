@@ -6,7 +6,7 @@
 ```
 REPO=sqlpp
 OWNER=hirauchi0713
-GIT_SQLPP_TOKEN=xxxx
+GIT_TOKEN=xxxx
 ```
 
 ## 使い方
