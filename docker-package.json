@@ -1,0 +1,14 @@
+{
+  "name": "node-ci",
+  "version": "1.0.0",
+  "description": "node-ci",
+  "main": "index.js",
+  "repository": "git@github.com:hirauchi0713/node-ci.git",
+  "author": "Hideyuki Hirauchi <hirauchi@ideapump.net>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "pr-check-ok": "node ci/pr-check-ok.js",
+    "branch-protection": "node ci/branch-protection.js"
+  }
+}

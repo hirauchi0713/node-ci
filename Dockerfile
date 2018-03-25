@@ -11,12 +11,16 @@ RUN n 8.9.4
 RUN yarn
 RUN yarn global add node-dev pug-cli
 
+RUN yarn add \
+  dotenv \
+  node-rest-client
+
 RUN aptitude update
 RUN aptitude install -y python-pip
 RUN pip install python-swiftclient
 RUN pip install python-keystoneclient
 
 ADD ci /ci
-ADD package.json /
+ADD docker-package.json /package.json
 
 ENTRYPOINT ["yarn"]
