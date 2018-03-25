@@ -8,11 +8,22 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dc": "docker-compose run --rm node-ci",
-    "pr-check-ok": "yarn dc pr-check-ok",
-    "branch-protection": "yarn dc branch-protection",
-    "docker-build": "docker build -t hirauchi/node-ci .",
-    "git-open": "open https://github.com/hirauchi0713/node-ci",
-    "docker-push": "docker push hirauchi/node-ci"
+    "lib:dcr": "docker-compose run --rm node-ci",
+    "cmd:pr-check-ok": "yarn lib:dcr pr-check-ok",
+    "cmd:branch-protection": "yarn lib:dcr branch-protection",
+    "srv:git-handler": "docker-compose run --name git-handler -d -p '8080:80' node-ci git-handler",
+    "dev:dev-gh": "node ci/git-handler.js",
+    "dev:watch": "chokidar 'ci/**/*.js' docker-package.json Dockerfile -c 'yarn dev:docker-build'",
+    "dev:docker-build": "docker build -t hirauchi/node-ci .",
+    "dev:git-open": "open https://github.com/hirauchi0713/node-ci",
+    "dev:docker-push": "docker push hirauchi/node-ci"
+  },
+  "dependencies": {
+    "chokidar-cli": "^1.2.0",
+    "dotenv": "^5.0.1",
+    "fs-extra": "^5.0.0",
+    "fse": "^4.0.0",
+    "github-webhook-handler": "^0.7.1",
+    "node-rest-client": "^3.1.0"
   }
 }

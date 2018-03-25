@@ -9,6 +9,7 @@
   "private": true,
   "scripts": {
     "pr-check-ok": "node ci/pr-check-ok.js",
+    "git-handler": "node ci/git-handler.js",
     "branch-protection": "node ci/branch-protection.js"
   }
 }

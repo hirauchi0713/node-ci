@@ -20,6 +20,10 @@ RUN aptitude install -y python-pip
 RUN pip install python-swiftclient
 RUN pip install python-keystoneclient
 
+RUN yarn add github-webhook-handler
+RUN yarn add fs-extra
+
+####################################################
 ADD ci /ci
 ADD docker-package.json /package.json
 
