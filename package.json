@@ -8,8 +8,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "pr-check-ok": "node ci/pr-check-ok.js",
-    "branch-protection": "node ci/branch-protection.js",
+    "dc": "docker-compose run --rm node-ci",
+    "pr-check-ok": "yarn dc pr-check-ok",
+    "branch-protection": "yarn dc branch-protection",
     "docker-build": "docker build -t hirauchi/node-ci .",
     "git-open": "open https://github.com/hirauchi0713/node-ci",
     "docker-push": "docker push hirauchi/node-ci"

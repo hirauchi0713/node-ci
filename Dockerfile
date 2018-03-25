@@ -21,6 +21,6 @@ RUN pip install python-swiftclient
 RUN pip install python-keystoneclient
 
 ADD ci /ci
-ADD package.json /
+ADD docker-package.json /package.json
 
 ENTRYPOINT ["yarn"]
